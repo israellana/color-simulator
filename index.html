@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulador de Cores</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body onload="changeDivColor()">
+    <div class="container">
+      <h1>Simulador de cores</h1>
+      <div id="redContainer" class="colorContainers">
+        <span>(R) Vermelho:</span>
+        <input
+          value="0"
+          type="range"
+          min="0"
+          max="255"
+          oninput="updateValue(event)"
+          class="colorRanges"
+        />
+        <input
+          type="text"
+          value="0"
+          id="redValue"
+          class="colorValue"
+          disabled
+        />
+      </div>
+      <div id="greenContainer" class="colorContainers">
+        <span>(G) Verde:</span>
+        <input
+          value="0"
+          type="range"
+          min="0"
+          max="255"
+          oninput="updateValue(event)"
+          class="colorRanges"
+        />
+        <input
+          type="text"
+          value="0"
+          id="greenValue"
+          class="colorValue"
+          disabled
+        />
+      </div>
+      <div id="blueContainer" class="colorContainers">
+        <span>(B) Azul:</span>
+        <input
+          value="0"
+          type="range"
+          min="0"
+          max="255"
+          oninput="updateValue(event)"
+          class="colorRanges"
+        />
+        <input
+          type="text"
+          value="0"
+          id="blueValue"
+          class="colorValue"
+          disabled
+        />
+      </div>
+      <div class="visualizer"></div>
+    </div>
+  </body>
+  <script src="./src/index.js"></script>
+</html>
